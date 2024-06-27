@@ -52,4 +52,15 @@ public class HumanResourceRepository {
          }
       });
    }
+   
+   public int getEmpCount() {
+	   String sql = "select count(*) from employees";
+	   return jdbcTemplate.queryForObject(sql, Integer.class);
+   }
+   
+   public int getEmpCount(int deptid) {
+	   String sql = "SELECT COUNT(*) FROM employees WHERE department_id=?";
+	   return jdbcTemplate.queryForObject(sql, Integer.class, deptid);
+   }
+   
 }

@@ -21,12 +21,12 @@ import lombok.extern.log4j.Log4j;
 @Log4j
 public class OracleJDBCTests {
 
-    static {
+	static {
         try {
             Class.forName("oracle.jdbc.OracleDriver");
-            System.out.println("µå¶óÀÌ¹ö ·Îµå ¼º°ø");
+            System.out.println("ë“œë¼ì´ë²„ ë¡œë“œ ì„±ê³µ");
         } catch (ClassNotFoundException e) {
-            log.error("µå¶óÀÌ¹ö ·Îµå ½ÇÆĞ", e);
+            log.error("ë“œë¼ì´ë²„ ë¡œë“œ ì‹¤íŒ¨", e);
         }
     }
 
@@ -36,10 +36,10 @@ public class OracleJDBCTests {
     @Test(timeout = 3000)
     public void testConnection() {
         try (Connection con = jdbcTemplate.getDataSource().getConnection()) {
-            log.info("DB ¿¬°á ¼º°ø: " + con);
+            log.info("DB ì—°ê²° ì„±ê³µ: " + con);
             assertNotNull(con);
         } catch (Exception e) {
-            log.error("DB ¿¬°á ½ÇÆĞ", e);
+            log.error("DB ì—°ê²° ì‹¤íŒ¨", e);
             fail(e.getMessage());
         }
     }
