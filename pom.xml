@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>org.aspectj</groupId>
 			<artifactId>aspectjweaver</artifactId>
-			<version>1.9.1</version>
+			<version>${org.aspectj-version}</version>
 		</dependency>
 		
 		<!-- Logging -->
@@ -133,7 +133,29 @@
 			<version>1.18.32</version>
 			<scope>provided</scope>
 		</dependency>
-
+		
+		<!-- Spring JDBC -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${org.springframework-version}</version>
+		</dependency>
+		
+		<!-- Connection Pool -->
+		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-db cp2 -->
+		<dependency>
+		    <groupId>org.apache.commons</groupId>
+		    <artifactId>commons-dbcp2</artifactId>
+		    <version>2.9.0</version>
+		</dependency>
+		
+		<!-- Oracle JDBC Driver -->
+		<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc6 -->
+		<dependency>
+		    <groupId>com.oracle.database.jdbc</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>11.2.0.4</version>
+		</dependency>
 
 	</dependencies>
 	<build>
